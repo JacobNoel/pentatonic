@@ -66,6 +66,8 @@ def print_fretboard():
         line += ' |'
         print(line)
 
+
+def print_numbers():
     line = '\n| '
     for i in range(23):
         line += ' ' + str(i)
@@ -79,3 +81,4 @@ def print_fretboard():
 
 if __name__ == '__main__':
     print_fretboard()
+    print_numbers()

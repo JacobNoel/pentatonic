@@ -1,7 +1,9 @@
 from enum import Enum
 
 
-class Intervals(Enum):
+class Scales(Enum):
+    major = [0, 2, 4, 5, 7, 9, 11]
+    minor = [0, 2, 3, 5, 7, 8, 10]
     major_pentatonic = [0, 2, 4, 7, 9]
     minor_pentatonic = [0, 3, 5, 7, 10]
     major_blues = [0, 2, 3, 4, 7, 9]
@@ -46,7 +48,7 @@ def get_pentatonic_scale(root_note, intervals):
 
 
 def print_fretboard():
-    pentatonic_scale = get_pentatonic_scale(Notes.C, Intervals.major_pentatonic)
+    pentatonic_scale = get_pentatonic_scale(Notes.C, Scales.major_pentatonic)
     strings = [Notes.E, Notes.B, Notes.G, Notes.D, Notes.A, Notes.E]
 
     for s in strings:
